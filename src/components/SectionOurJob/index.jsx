@@ -51,11 +51,11 @@ const SectionOurJob = () => {
                     }
                 </div>
 
-                <div className='more'>
+                <a href='#' className='more'>
                     <div className="rectangle"></div>
                     <p>Заказать медиапродукт</p>
                     <img src={nextBg} alt="" />
-                </div>
+                </a>
             </div>
         </div>
     )

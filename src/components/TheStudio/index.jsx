@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img1 from '../../assets/images/study-img.jpg'
 import img2 from '../../assets/images/study-img2.jpg'
 import img3 from '../../assets/images/study-img3.jpg'
@@ -6,9 +6,11 @@ import dots from '../../assets/images/dots.png'
 import player from '../../assets/icons/play.svg'
 import circle from '../../assets/icons/circle.svg'
 import nextBg from '../../assets/icons/nextBg.svg'
+import ModalVideo from 'react-modal-video'
 import './styleStudio.scss'
 
 const TheStudio = () => {
+    const [isOpen, setOpen] = useState(false)
     return (
         <div className='theStudio'>
             <div className="container">
@@ -24,11 +26,12 @@ const TheStudio = () => {
                         <img src={img3} alt="" className='img3' />
 
                         <div className="wrap">
-                            <div className="background">
+                            <div className="background" onClick={() => setOpen(true)}>
                                 <img src={player} alt="" />
                             </div>
                             <h3>наша команда</h3>
                         </div>
+                        <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="j942wKiXFu8" onClose={() => setOpen(false)} />
                     </div>
 
                     <div className="card-right">
@@ -57,11 +60,11 @@ const TheStudio = () => {
                     </div>
                 </div>
 
-                <div className='more'>
+                <a href='#' className='more'>
                     <div className="rectangle"></div>
                     <p>Заказать медиапродукт</p>
                     <img src={nextBg} alt="" />
-                </div>
+                </a>
             </div>
         </div>
     )

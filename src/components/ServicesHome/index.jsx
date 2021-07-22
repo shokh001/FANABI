@@ -40,11 +40,11 @@ const Services = () => {
                     }
                 </div>
 
-                <div className='moreAbout'>
+                <a href='#' className='moreAbout'>
                     <div className="rectangle"></div>
                     <p>Заказать медиапродукт</p>
                     <img src={nextBg} alt="" />
-                </div>
+                </a>
             </div>
         </div>
     )

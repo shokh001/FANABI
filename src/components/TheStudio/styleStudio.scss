@@ -81,6 +81,7 @@
             align-items: center;
             justify-content: center;
             width: 30px;
+            cursor: pointer;
             height: 30px;
             background: var(--main-color);
 
@@ -141,6 +142,7 @@
       align-items: center;
       position: relative;
       margin-top: 57px;
+      text-decoration: none;
       .rectangle {
         width: 30px;
         height: 50px;

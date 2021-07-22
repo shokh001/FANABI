@@ -46,11 +46,11 @@ const Contact = ({ title }) => {
                 </div>
 
                 {
-                    title && <div className='more'>
+                    title && <a href='#' className='more'>
                     <div className="rectangle"></div>
                     <p>Заказать медиапродукт</p>
                     <img src={nextBg} alt="" />
-                </div>
+                </a>
                 }
             </div>
         </div>

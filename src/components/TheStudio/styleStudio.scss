@@ -70,34 +70,44 @@
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
-            line-height: 25px;                        
+            line-height: 25px;
             color: var(--main-color);
           }
 
-          .shadow {
-            width: 40px;
-            height: 40px;
-            background: rgba(251, 110, 1, 0.3);
+          .background {
             display: flex;
-            align-items: center;
+            margin-right: 20px;
             border-radius: 50%;
+            align-items: center;
             justify-content: center;
-            margin-right: 10px;
-            animation-iteration-count: infinite;
-            animation-duration: 1s;
-            .background {              
-              display: flex;
-              border-radius: 50%;
-              align-items: center;
-              justify-content: center;
-              width: 30px;
-              height: 30px;
-              background: var(--main-color);
+            width: 30px;
+            height: 30px;
+            background: var(--main-color);
 
-              img {
-                  width: 10px;
-                  height: 10px;
-              }
+            img {
+              width: 10px;
+              height: 10px;
+            }
+
+            &::before {
+              box-sizing: border-box;
+              content: '';
+              color: rgba(251, 110, 1, 0.46);
+              position: absolute;
+              z-index: 0;
+              display: block;
+              width: 40px;
+              height: 40px;
+              background: rgba(251, 110, 1, 0.46);
+              border-radius: 50%;
+              animation-name: pulse-border;
+              animation-duration: 1500ms;
+              animation-timing-function: ease-out;
+              animation-delay: 0.2s;
+              animation-iteration-count: infinite;
+              animation-direction: normal;
+              animation-fill-mode: none;
+              animation-play-state: running;
             }
           }
         }
@@ -114,7 +124,7 @@
           line-height: 25px;
           color: var(--text-color);
           margin-top: 20px;
-          
+
           span {
             color: var(--main-color);
           }
@@ -127,29 +137,29 @@
     }
 
     .more {
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin-top: 57px;
-        .rectangle {
-          width: 30px;
-          height: 50px;
-          background: #fdefe7;
-          position: absolute;
-          left: -8px;
-          top: -12px;
-          z-index: -1;
-        }
-      
-        p {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 25px;
-          color: var(--grey-color);
-          margin-right: 12px;
-        }
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 57px;
+      .rectangle {
+        width: 30px;
+        height: 50px;
+        background: #fdefe7;
+        position: absolute;
+        left: -8px;
+        top: -12px;
+        z-index: -1;
       }
+
+      p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--grey-color);
+        margin-right: 12px;
+      }
+    }
   }
 }

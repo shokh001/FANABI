@@ -7,7 +7,6 @@ import player from '../../assets/icons/play.svg'
 import circle from '../../assets/icons/circle.svg'
 import nextBg from '../../assets/icons/nextBg.svg'
 import './styleStudio.scss'
-import 'animate.css'
 
 const TheStudio = () => {
     return (
@@ -20,15 +19,13 @@ const TheStudio = () => {
 
                 <div className="card">
                     <div className="card-left">
-                        <img src={img1} alt="" className='img1'/>
-                        <img src={img2} alt="" className='img2'/>
-                        <img src={img3} alt="" className='img3'/>
+                        <img src={img1} alt="" className='img1' />
+                        <img src={img2} alt="" className='img2' />
+                        <img src={img3} alt="" className='img3' />
 
                         <div className="wrap">
-                            <div className="shadow animate__animated animate__pulse">
-                                <div className="background">
-                                    <img src={player} alt="" />
-                                </div>
+                            <div className="background">
+                                <img src={player} alt="" />
                             </div>
                             <h3>наша команда</h3>
                         </div>

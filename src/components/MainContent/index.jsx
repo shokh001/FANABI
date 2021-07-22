@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import ModalVideo from 'react-modal-video'
 import './mainContent.scss'
-import 'animate.css'
 
 import slidervideo from '../../assets/images/slidervideo.jpg'
 import checked from '../../assets/icons/circle-checked.svg'
@@ -26,7 +25,7 @@ const MainContent = () => {
                     <div className="slidervideo">
                         <img src={slidervideo} alt="slidervideo" />
                     </div>                    
-                    <div className="background animate__animated animate__pulse">
+                    <div className="background ">
                         <img src={play} alt="" />
                     </div>
                     <h2>наша команда</h2>

@@ -1,0 +1,134 @@
+.sectionOurJob {
+  padding: 80px 0 0;
+
+  .container {
+    .parts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      h2 {
+        position: relative;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 58px;
+        color: var(--title-color);
+
+        img {
+          position: absolute;
+          left: -40px;
+          top: -20px;
+        }
+      }
+
+      .right-part {
+        a {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 21px;
+          text-decoration: none;
+          color: #898989;
+          margin-left: 60px;
+        }
+      }
+    }
+
+    .galery {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 133px;
+      height: 320px;
+
+      .card {
+        width: 450px;
+        height: 300px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 3px;
+        position: relative;
+
+        .hover {
+          opacity: 0;
+          background: rgba(251, 110, 1, 0.9);
+          border-radius: 3px;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          padding: 190px 30px 35px;
+          top: 0;
+          left: 0;
+          transition: all 0.3s ease;
+          h3 {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 25px;
+            color: #ffffff;
+          }
+
+          .line {
+            width: 80px;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 12px 0;
+          }
+
+          p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 25px;
+            color: #ffffff;
+          }
+        }
+
+        &:hover {
+            .hover {
+                opacity: 1;
+            }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    .more {      
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 57px;
+      .rectangle {
+        width: 30px;
+        height: 50px;
+        background: #fdefe7;
+        position: absolute;
+        left: -8px;
+        top: -12px;
+        z-index: -1;
+      }
+  
+      p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--grey-color);
+        margin-right: 12px;
+      }
+    }
+  }
+}

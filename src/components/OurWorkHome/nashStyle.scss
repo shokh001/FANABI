@@ -1,0 +1,194 @@
+.nashRabot {
+  padding: 90px 0 57px;
+
+  .titleBox {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .dots {
+      position: absolute;
+      left: -40px;
+      top: -20px;
+    }
+
+    h2 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 58px;
+      color: var(--title-color);
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      button {
+        margin-left: 20px;
+        padding: 8px 28px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--main-color);
+        background-color: #fff;
+        border: 1px solid var(--main-color);
+        border-radius: 200px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .slider {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 425px;
+    position: relative;
+    max-width: 100rem;
+    transition: all 0.3s linear;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      transition: transform 1s;
+
+      .slide-left {
+        position: relative;
+        width: 40%;
+        height: 425px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 3px;
+        }
+
+        .design {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          top: 0;
+          padding: 30px 35px;
+
+          span {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 25px;
+            color: rgba(255, 255, 255, 0.2);
+          }
+
+          .grafikDesign {
+            padding: 12px 26px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .slide-right {
+        width: 60%;
+        padding: 66px 106px 38px 32px;
+        background: #f3f3f3;
+        z-index: -2;
+        border-radius: 0 3px 3px 0;
+        .task {
+          position: relative;
+          h3 {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: var(--title-color);
+          }
+          p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: var(--grey-color);
+          }
+
+          .icon-task {
+            position: absolute;
+            top: -35px;
+            z-index: -1;
+          }
+        }
+
+        .plan {
+          margin-top: 60px;
+          position: relative;
+
+          .icon-plan {
+            position: absolute;
+            top: -35px;
+            z-index: -1;
+          }
+          p {
+            margin-top: 10px;
+            display: flex;
+            align-items: flex-start;
+            img {
+              margin-right: 5px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .moreAbout {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 57px;
+    margin-bottom: 60px;
+    .rectangle {
+      width: 30px;
+      height: 50px;
+      background: #fdefe7;
+      position: absolute;
+      left: -8px;
+      top: -12px;
+      z-index: -1;
+    }
+
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--grey-color);
+      margin-right: 12px;
+    }
+  }
+}

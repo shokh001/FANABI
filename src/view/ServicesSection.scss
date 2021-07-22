@@ -1,0 +1,29 @@
+.bgGrey {
+  .more {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 90px;
+    margin-top: 57px;
+    .rectangle {
+      width: 30px;
+      height: 50px;
+      background: #fdefe7;
+      position: absolute;
+      left: -8px;
+      top: -12px;
+      z-index: -1;
+    }
+  
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--grey-color);
+      margin-right: 12px;
+    }
+  }
+}
+

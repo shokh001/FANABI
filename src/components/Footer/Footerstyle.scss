@@ -1,0 +1,21 @@
+.Footer {
+  padding: 19px 0;
+  background-color: var(--title-color);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22px;
+      color: #ffffff;
+
+      span {
+          color: #ffffffc7;
+      }
+    }
+  }
+}

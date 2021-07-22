@@ -1,0 +1,92 @@
+.serviceCard {
+  padding: 80px 0;
+
+  .container {
+    h2 {
+      position: relative;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 58px;
+      color: var(--title-color);
+      margin-bottom: 35px;
+
+      img {
+        position: absolute;
+        left: -44px;
+        top: -20px;
+        z-index: 0;
+      }
+    }
+
+    .cardWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+
+      .card {
+        padding :25px 15px 35px 20px;
+        background: #ffffff;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        width: 330px;
+        height: 210px;
+        text-decoration: none;
+        border: 3px solid #fff;
+
+        &:hover {
+          border: 3px solid #ffe5d1;
+          filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.08));
+          box-sizing: border-box;
+        }
+
+        .icon-number {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+
+          .shadow {
+            width: 70px;
+            height: 70px;
+            background: rgba(251, 110, 1, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            .backgorund {
+              border-radius: 50%;
+              width: 62px;
+              height: 62px;
+              background: var(--main-color);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 22px;
+            color: #ffe1ca;
+          }
+        }
+
+        p {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 22px;
+          color: var(--title-color);
+        }
+      }
+    }
+  }
+}

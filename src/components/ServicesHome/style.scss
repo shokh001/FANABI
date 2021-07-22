@@ -1,0 +1,127 @@
+.services {
+  // padding-bottom: 57px;
+  .container {
+    h2 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 58px;
+      color: var(--title-color);
+      margin-bottom: 25px;
+      position: relative;
+          
+          img {
+            position: absolute;
+            left: -40px;
+            top: -20px;
+          }
+    }
+
+    .moreAbout {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 60px;
+        margin-top: 57px;
+        .rectangle {
+          width: 30px;
+          height: 50px;
+          background: #fdefe7;
+          position: absolute;
+          left: -8px;
+          top: -12px;
+          z-index: -1;
+        }
+    
+        p {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25px;
+          color: var(--grey-color);
+          margin-right: 12px;
+        }
+      }
+
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card {
+        background: #ffffff;
+        width: 330px;
+        height: 330px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 25px 14px 25px 25px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.8),
+              rgba(0, 0, 0, 0.8)
+            ),
+            url('/assets/images/study-img2.jpg');
+          background-size: cover;
+          p,
+          h3 {
+            color: white;
+          }
+        }
+
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 21px;
+          color: #898989;          
+        }
+
+        p {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: var(--title-color);
+          margin-top: 15px;
+          display: flex;
+          align-items: flex-start;
+
+          img {
+            margin-top: 5px;
+            margin-right: 10px;
+          }
+        }
+
+        .footer {
+          position: absolute;
+          bottom: 25px;
+          left: 25px;
+          .line {
+            width: 280px;
+            background-color: #e8e8e8;
+            height: 1px;
+            margin-bottom: 20px;
+          }
+
+          .foot {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--title-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+
+.mainContent {
+  background-color: transparent;
+  padding: 170px 0 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../../assets/images/main-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .content {
+      width: 50%;
+      h2 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 58px;
+        color: #ffffff;
+        margin-bottom: 40px;
+
+        span {
+          color: var(--main-color);
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        font-family: Montserrat;
+        margin-bottom: 28px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .slideVideo {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      position: relative;
+      width: 420px;
+      height: 420px;
+      padding: 20px;
+      background-color: transparent;
+      overflow: hidden;
+
+      .slidervideo {
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        img {
+          border-radius: 50%;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(46, 42, 42, 0.6);
+        }
+      }
+
+      .background {
+        background: var(--main-color);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 44%;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        top: 44%;
+        transform: translateY(-50%) translateX(-50%);
+
+        &::before {
+          box-sizing: border-box;
+          content: '';
+          color: rgba(251, 110, 1, 0.46);
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 70px;
+          height: 70px;
+          background: rgba(251, 110, 1, 0.46);
+          border-radius: 50%;
+        }
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 65%;
+        transform: translateY(-65%) translateX(-50%);
+      }
+    }
+  }
+}

@@ -17,8 +17,8 @@ const Reportaj = () => {
 
                     <h5>Этапы создания репортажа:</h5>
 
-                    <div className="list-group" style={{ width: '80%', marginBottom: '30px' }}>
-                        <div className="list" style={{ width: '47%' }}>
+                    <div className="list-group list-video">
+                        <div className="listImg">
                             <p>
                                 <span>1)</span>
                                 Написание концепции
@@ -36,7 +36,7 @@ const Reportaj = () => {
                                 Интервью
                             </p>
                         </div>
-                        <div className="list" style={{ width: '47%' }}>
+                        <div className="listImg">
                             <p>
                                 <span>5)</span>
                                 Озвучивание текста

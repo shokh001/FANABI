@@ -8,6 +8,7 @@ import plan from '../../assets/icons/plan.svg'
 import circle from '../../assets/icons/circle.svg'
 import nextBg from '../../assets/icons/nextBg.svg'
 import './nashStyle.scss'
+import { Link } from 'react-router-dom'
 
 const NashRabot = () => {
 
@@ -24,17 +25,19 @@ const NashRabot = () => {
     return (
         <div className="nashRabot">
             <div className="container titleBox">
-                <img src={dots} alt="" className='dots'/>
+                <img src={dots} alt="" className='dots' />
                 <h2>Наши работы</h2>
                 <div className="buttons">
-                    <img onClick={leftBtn} src={left} alt="" />
-                    <img onClick={rightBtn} src={right} alt="" />
-                    <button type='button'>Смотреть все</button>
+                    <div>
+                        <img onClick={leftBtn} src={left} alt="" />
+                        <img onClick={rightBtn} src={right} alt="" />
+                    </div>
+                    <Link to='/Наши' className='button' type='button'>Смотреть все</Link>
                 </div>
             </div>
 
             <div className="container">
-                <div className='slider'>
+                <Link to='/capital' className='slider'>
                     <div className='slide' style={{ transform: `translateX(${(0 - slide) * 100}%)` }}>
                         <div className="slide-left">
                             <img src={img} alt="" />
@@ -146,7 +149,7 @@ const NashRabot = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
                 <a href='#' className='moreAbout'>
                     <div className="rectangle"></div>
                     <p>Заказать медиапродукт</p>

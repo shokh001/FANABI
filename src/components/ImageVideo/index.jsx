@@ -20,10 +20,10 @@ const ImageVideo = () => {
                      репутацию
                  </p>
 
-                 <h5>Какие задачи могут решить презентационные и имиджевые ролики:</h5>
+                 <h5 className='imgSection-title'>Какие задачи могут решить презентационные и имиджевые ролики:</h5>
 
-                 <div className="list-group" style={{ width: '80%', marginBottom:'30px' }}>
-                     <div className="list" style={{ width: '47%' }}>
+                 <div className="list-group list-group-img">
+                     <div className="listImg">
                          <p>
                              <span>1)</span>
                              Рассказать о компании и ее истории
@@ -41,7 +41,7 @@ const ImageVideo = () => {
                              Создать или поддержать положительный имидж компании
                          </p>
                      </div>
-                     <div className="list" style={{ width: '47%' }}>
+                     <div className="listImg">
                          <p>
                              <span>5)</span>
                              Привлечь новые кадры

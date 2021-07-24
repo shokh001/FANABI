@@ -1,16 +1,39 @@
 .aboutCapital {
-  padding: 80px 0 90px;
+  padding-top: 80px;
+
+  @media (max-width: 992px) {
+    padding-top: 60px;
+   }
+  
+  @media (max-width: 576px) {
+    padding-top: 40px;
+   }
 
   .container {
-      .imgs {
-          border-radius: 3px;
-          width: 100%;
-      }
+    .imgs {
+      border-radius: 3px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+      position: relative;
+      @media (min-width: 992px) {
+        height: 550px;
+       }
+      @media (max-width: 992px) {
+        height: 400px;
+       }
+      
+      @media (max-width: 576px) {
+        height: 250px;
+       }
+      
+    }
     .section {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       h1 {
         font-family: Montserrat;
         font-style: normal;
@@ -20,22 +43,37 @@
         color: var(--title-color);
         position: relative;
 
+        @media (max-width: 1200px) {
+          font-size: 32px;
+         }
+
+         @media (max-width: 992px) {
+          font-size: 26px;
+         }
+         @media (max-width: 576px) {
+          font-size: 20px;
+         }
+
         img {
           position: absolute;
           left: -44px;
           top: -20px;
-          z-index: -1;
+          // z-index: -1;
         }
       }
 
-    span {
-      cursor: pointer;
+      span {
+        cursor: pointer;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 600;
         font-size: 17px;
         line-height: 21px;
         color: #898989;
+
+        @media (max-width: 992px) {
+          font-size: 15px;
+         }
       }
     }
 
@@ -52,10 +90,17 @@
         line-height: 25px;
         color: var(--title-color);
         margin-bottom: 10px;
+
+        @media (max-width: 992px) {
+          font-size: 17px;
+         }
+        @media (max-width:576px) {
+          font-size: 16px;
+         }
       }
 
       .part {
-          margin-top: 35px;          
+        margin-top: 35px;
       }
 
       p {
@@ -63,46 +108,26 @@
         font-style: normal;
         font-weight: normal;
         font-size: 17px;
-        line-height: 24px;            
+        line-height: 24px;
         color: var(--title-color);
         display: flex;
         align-items: flex-start;
+        @media (max-width: 992px) {
+          font-size: 16px;
+         }
+        @media (max-width:576px) {
+          font-size: 15px;
+         }
 
         img {
-            margin-top: 8px;
-            margin-right: 12px;
+          margin-top: 8px;
+          margin-right: 12px;
         }
       }
     }
 
     .img-3 {
-        margin-top: 30px;
+      margin-top: 30px;
     }
-
-    .more {
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin-top: 57px;
-        .rectangle {
-          width: 30px;
-          height: 50px;
-          background: #fdefe7;
-          position: absolute;
-          left: -8px;
-          top: -12px;
-          z-index: -1;
-        }
-    
-        p {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 25px;
-          color: var(--grey-color);
-          margin-right: 12px;
-        }
-      }
   }
 }

@@ -31,12 +31,12 @@ const AnimationVideo = () => {
                                 <span>3)</span>
                                 Разработка иллюстраций
                             </p>
+                        </div>
+                        <div className="list">
                             <p>
                                 <span>4)</span>
                                 Раскадровка и аниматик
                             </p>
-                        </div>
-                        <div className="list">
                             <p>
                                 <span>5)</span>
                                 Визуальная стилистика
@@ -45,6 +45,8 @@ const AnimationVideo = () => {
                                 <span>6)</span>
                                 Озвучка
                             </p>
+                        </div>
+                        <div className="list">
                             <p>
                                 <span>7)</span>
                                 Анимация
@@ -53,20 +55,10 @@ const AnimationVideo = () => {
                                 <span>8)</span>
                                 Монтаж
                             </p>
-                        </div>
-                        <div className="list">
                             <p>
                                 <span>9)</span>
                                 Постпродакшн
-                            </p>
-                            <p>
-                                <span>10)</span>
-                                Звуковое оформление
-                            </p>
-                            <p>
-                                <span>11)</span>
-                                Сведение. Видеоря синхронизируется со звуковой дорожкой
-                            </p>
+                            </p>                          
                         </div>
 
 

@@ -1,5 +1,5 @@
 .sectionOurJob {
-  padding: 80px 0 0;
+  padding: 70px 0 0;
 
   .container {
     .parts {
@@ -7,15 +7,21 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 20px;
+      flex-wrap: wrap;    
 
       h2 {
         position: relative;
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 36px;
-        line-height: 58px;
+        font-size: 32px;
+        line-height: 58px;        
         color: var(--title-color);
+        margin-right: 16px;
+        
+        @media (max-width: 576px) {
+          font-size: 25px;
+        }
 
         img {
           position: absolute;
@@ -25,6 +31,10 @@
       }
 
       .right-part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
         a {
           font-family: Montserrat;
           font-style: normal;
@@ -33,7 +43,19 @@
           line-height: 21px;
           text-decoration: none;
           color: #898989;
-          margin-left: 60px;
+          margin-right: 32px;
+          
+          &:last-child{
+            margin-right: 0;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 15px;
+            line-height: 19px;
+          }
+          @media (max-width: 1060px) {
+            padding: 8px 0;
+          }
         }
       }
     }
@@ -111,7 +133,7 @@
       position: relative;
       margin-top: 57px;
       text-decoration: none;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
       .rectangle {
         width: 30px;
         height: 50px;
@@ -130,6 +152,13 @@
         line-height: 25px;
         color: var(--grey-color);
         margin-right: 12px;
+        @media (max-width: 992px) {
+          font-size: 16px;
+        }
+        
+        @media (max-width: 576px) {
+          font-size: 15px;
+        }
       }
     }
   }

@@ -8,6 +8,8 @@ import facebook from '../../assets/icons/facebook.svg'
 import twitter from '../../assets/icons/twitter.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import call from '../../assets/icons/call.svg'
+import burger from '../../assets/icons/burger.svg'
+import times from '../../assets/icons/times.png'
 import arrowBottom from '../../assets/icons/bottom-arrow.svg'
 
 const Navbar = () => {
@@ -15,10 +17,11 @@ const Navbar = () => {
     const history = useHistory()
     const onClickLogo = () => {
         setActiveLink(0)
-        history.push('/home')
+        history.push('/домa')
     }
 
     const [activeLink, setActiveLink] = useState(0)
+    const [mobileNav, setMobileNav] = useState(false)
 
     const [display, setDisplay] = useState(false)
     const [russian, setRussian] = useState('Ru')
@@ -78,7 +81,7 @@ const Navbar = () => {
 
                     <div className="call">
                         <img src={call} alt="" />
-                        <a href="#">+998901131310</a>
+                        <a href="#">+998900000000</a>
                     </div>
 
                     <div className="language" onClick={() => setDisplay(!display)}>
@@ -91,7 +94,25 @@ const Navbar = () => {
                     <div style={{ display: display && 'block' }} className="language uzbek" onClick={Uzbek}>
                         <span>{uzbek}</span>
                     </div>
+
+                    <img
+                        src={burger}
+                        alt=""
+                        className='burger-icon'
+                        onClick={() => setMobileNav(true)}
+                    />
                 </div>
+            </div>
+
+            <div className="mobile-navbar" style={{ transform: mobileNav && 'translateX(0)' }}>
+                <div className="close-menu">
+                    <Link  onClick={() => setMobileNav(false)} to='/домa' className='home'>Домa</Link>
+                    <img src={times} alt="" onClick={() => setMobileNav(false)} />
+                </div>
+                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Наши'>Наши работы</Link>
+                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Услуги'>Услуги и цены</Link>
+                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/студии'>О студии</Link>
+                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Контакты'>Контакты</Link>
             </div>
         </div>
     )

@@ -8,13 +8,13 @@ import './style.scss'
 
 const Contact = ({ title }) => {
     return (
-        <div className='contact'>
+        <div className='contact' style={{paddingTop: title && '80px', paddingBottom: title && '0'}}>
             <div className="container">
                 <h2>
                     {title? 'Контакты' :'Наши контакты'}
                     <img src={dots} alt="" />
                 </h2>
-                <div className='wrapper'>
+                <div className='wrapper' style={{marginBottom: title && '120px'}}>
                     <div className="left-content">
                         <div className='info'>
                             <h3>Адрес:</h3>

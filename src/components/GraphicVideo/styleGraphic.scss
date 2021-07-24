@@ -1,13 +1,25 @@
 @import 'node_modules/react-modal-video/scss/modal-video.scss';
 .graphicVideo {
   padding: 35px 0;
-  background: linear-gradient(to right, #f3f3f3 80%, #FCFCFC 20%);
+  background: linear-gradient(to right, #f3f3f3 80%, #fcfcfc 20%);
   margin-bottom: 100px;
+  @media (max-width: 992px) {
+    background: linear-gradient(to right, #fcfcfc 80%, #fcfcfc 20%);
+    padding-bottom: 350px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
 
   .container {
+    position: relative;
     .left-section {
-      width: 80%;
-      position: relative;
+      width: 70%;
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
 
       h4 {
         font-family: Montserrat;
@@ -17,10 +29,14 @@
         line-height: 25px;
         color: var(--main-color);
         margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+          font-size: 17px;
+        }
       }
 
       .text {
-          width: 880px;
+        width: 84%;
       }
 
       p {
@@ -29,8 +45,16 @@
         font-weight: normal;
         font-size: 17px;
         line-height: 25px;
-        color: var(--text-color);      
+        color: var(--text-color);
         margin-bottom: 18px;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 15px;
+        }
 
         span {
           margin-right: 5px;
@@ -43,7 +67,7 @@
         }
 
         .blackColor {
-            color: #000;
+          color: #000;
         }
       }
 
@@ -55,38 +79,84 @@
         line-height: 25px;
         color: var(--main-color);
         margin-bottom: 25px;
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+
+      .list-group-img.list-group {
+        width: 90%;
+      }
+
+      .list-video.list-group {
+        width: 80%;
       }
 
       .list-group {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         p {
-            display: flex;
-            align-items: flex-start;
+          display: flex;
+          align-items: flex-start;
         }
 
         .list {
-          width: 30%;
+          width: 32%;
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+        }
+
+        .listImg {
+          width: 47%;
+
+          @media (max-width: 576px) {
+            width: 100%;
+          }          
         }
       }
 
       .player-img {
-          position: absolute;    
-          cursor: pointer;      
-          top: 0;
-          right: -25%;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 15px;
+        width: 32%;
+        height: 320px;
 
-          .img {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+        @media (max-width: 992px) {
+          width: 100%;
+          top: 100%;
+          bottom: 0;
+          height: 300px;
+          right: 0;
+        }
 
-              .playerIcon {
-                  position: absolute;
-              }
+        .img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+
+            width: 100%;
+          height: 100%;
           }
+
+          .playerIcon {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+          }
+        }
       }
     }
   }

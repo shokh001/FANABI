@@ -26,7 +26,7 @@ const Root = () => {
           <Route path='/prmedia4' component={PrMedia4}/>
 
           <Route path="/">
-            <Redirect to="/home" />
+            <Redirect to="/домa" />
           </Route>
 
           <Route path="*">

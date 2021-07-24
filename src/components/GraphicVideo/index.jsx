@@ -60,11 +60,13 @@ const GraphicVideo = () => {
                             </p>
                         </div>
 
-                        <p>
-                            <span>7)</span>
-                            Написание титров, редактирование
-                            итогового ролика
-                        </p>
+                        <div className="list">
+                            <p>
+                                <span>7)</span>
+                                Написание титров, редактирование
+                                итогового ролика
+                            </p>
+                        </div>
                     </div>
 
                     <div onClick={() => setOpen(true)} className="player-img">

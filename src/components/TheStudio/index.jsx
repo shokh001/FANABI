@@ -20,21 +20,13 @@ const TheStudio = () => {
                 </h2>
 
                 <div className="card">
-                    <div className="card-left">
+                    <div className="card-left left">
                         <img src={img1} alt="" className='img1' />
                         <img src={img2} alt="" className='img2' />
-                        <img src={img3} alt="" className='img3' />
-
-                        <div className="wrap">
-                            <div className="background" onClick={() => setOpen(true)}>
-                                <img src={player} alt="" />
-                            </div>
-                            <h3>наша команда</h3>
-                        </div>
-                        <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="j942wKiXFu8" onClose={() => setOpen(false)} />
+                        <img src={img3} alt="" className='img3' />                        
                     </div>
 
-                    <div className="card-right">
+                    <div className="card-right card-left">
                         <p><strong>Медиастудия FANABI</strong> - это команда профессионалов и энтузиастов с многолетним опытом работы в
                             сфере режиссуры, управления медиа-проектами, операторского искусства, видео-монтажа и
                             графического дизайна.</p>
@@ -57,6 +49,14 @@ const TheStudio = () => {
                             Вашего бренда, изготовим медиа-продукцию любой сложности, и поддержим Вашу организацию в
                             достижении ее целей.</p>
                         <p>Узнайте более подробно о наших услугах <span>здесь</span></p>
+
+                        <div className="wrap" onClick={() => setOpen(true)}>
+                            <div className="background" >
+                                <img src={player} alt="" />
+                            </div>
+                            <h3>наша команда</h3>
+                        </div>
+                        <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="j942wKiXFu8" onClose={() => setOpen(false)} />
                     </div>
                 </div>
 

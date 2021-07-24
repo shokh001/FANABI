@@ -16,7 +16,7 @@ const AdvertisingVideo = () => {
                     <h5>Этапы создания рекламного ролика:</h5>
 
                     <div className="list-group">
-                        <div className="list" style={{width: "47%"}}>
+                        <div className="list-video">
                             <p>
                                 <span>1)</span>
                                 Разработка идей видеоролика
@@ -32,7 +32,7 @@ const AdvertisingVideo = () => {
                                 с различными концовками)
                             </p>
                         </div>
-                        <div className="list" style={{width: "47%"}}>
+                        <div className="list-video">
                             <p>
                                 <span>4)</span>
                                 Препродакшн (подготовка к съемкам)

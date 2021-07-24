@@ -1,7 +1,8 @@
 .navbar {
-  background-color: #1D1B1B;
+  background-color: #1d1b1b;
   padding: 30px 0;
-  
+  position: relative;
+
   .container {
     display: flex;
     align-items: center;
@@ -11,12 +12,22 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      img {
+        @media (max-width: 767px) {
+          width: 125px;
+        }
+      }
     }
 
     .navbarLinks {
       display: flex;
       align-items: center;
       justify-content: start;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
 
       .active::after {
         content: '';
@@ -32,6 +43,11 @@
       .link {
         text-decoration: none;
         position: relative;
+        margin-right: 45px;
+
+        &:last-child{
+          margin-right: 0;
+        }
 
         .hover {
           display: block;
@@ -51,9 +67,8 @@
 
         .original {
           font-family: Montserrat;
-          margin-right: 50px;
           font-style: normal;
-          white-space: nowrap;          
+          white-space: nowrap;
           font-weight: 500;
           font-size: 17px;
           line-height: 21px;
@@ -85,16 +100,25 @@
       position: relative;
 
       .messangers {
-        margin-right: 40px;
+        min-width: 128px;
+        margin-right: 10px;
+
+        @media (max-width: 576px) {
+          display: none;
+        }
         img {
-          margin-right: 25px;
+          margin-right: 25px;          
         }
       }
 
       .call {
         display: flex;
         align-items: center;
-        margin-right: 65px;
+        margin-right: 45px;
+        
+        @media (max-width: 767px) {
+          display: none;
+        }
 
         img {
           margin-right: 6px;
@@ -151,6 +175,71 @@
         right: 0;
         top: 80px;
       }
+
+      .burger-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        display: none;
+
+        @media (max-width: 1200px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .mobile-navbar {
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #222a32;
+    z-index: 10;
+
+    @media (max-width: 576px) {
+      width: 80%;
+    }
+
+    .close-menu {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ffffff94;
+      .home {
+        color: #ffffff;
+        font-family: Montserrat;
+          font-style: normal;
+          white-space: nowrap;          
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 21px;
+          text-decoration: none;
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+    }
+
+    .mobile-link {
+      border-bottom: 1px solid #ffffff94;
+      color: #ffffff;
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+      font-family: Montserrat;
+      font-style: normal;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 21px;      
     }
   }
 }

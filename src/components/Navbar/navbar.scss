@@ -144,12 +144,16 @@
       .language {
         text-align: center;
         width: 70px;
-        height: 32px;
         cursor: pointer;
-        padding: 5px 11px;
+        padding: 6px 11px;
         border: 1px solid #fb6e01;
         border-radius: 100px;
-
+        
+        @media (max-width: 576px) {
+          padding: 4px 8px;
+          border: none;
+          text-align: left;
+        }
         span {
           font-family: Montserrat;
           font-style: normal;
@@ -157,6 +161,10 @@
           font-size: 16px;
           line-height: 20px;
           color: #fb6e01;
+
+          @media (max-width: 576px) {
+            font-size: 15px;
+           }
         }
 
         img {
@@ -169,12 +177,22 @@
         position: absolute;
         right: 0;
         top: 40px;
+
+        @media (max-width: 1200px) {
+         right: 40px;
+        }
+        @media (max-width: 1200px) {
+         right: 40px;
+        }
       }
       .uzbek {
         display: none;
         position: absolute;
         right: 0;
         top: 80px;
+        @media (max-width: 1200px) {
+         right: 40px;
+        }
       }
 
       .burger-icon {

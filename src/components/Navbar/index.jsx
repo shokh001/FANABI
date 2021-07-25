@@ -106,7 +106,7 @@ const Navbar = () => {
 
             <div className="mobile-navbar" style={{ transform: mobileNav && 'translateX(0)' }}>
                 <div className="close-menu">
-                    <Link  onClick={() => setMobileNav(false)} to='/домa' className='home'>Домa</Link>
+                    <Link onClick={() => setMobileNav(false)} to='/домa' className='home'>Домa</Link>
                     <img src={times} alt="" onClick={() => setMobileNav(false)} />
                 </div>
                 <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Наши'>Наши работы</Link>

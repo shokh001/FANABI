@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import dots from '../../assets/images/dots.png'
 import { ServiceCardData } from '../../mock/data'
+import { ServiceCardIDContext } from '../../context/context'
 import './styleCard.scss'
 
 const ServiceCard = () => {
+    const [idContext, setIdContext] = useContext(ServiceCardIDContext);
+
+    const getID = (id) => {
+        setIdContext(id)
+    }
 
     return (
         <div className='serviceCard'>
@@ -18,7 +24,8 @@ const ServiceCard = () => {
                         ServiceCardData.map(({ id, text, descr, icon }) => {
                             return (
                                 <Link
-                                    to={'/prmedia' + id}
+                                    to='/prmedia'
+                                    onClick={() => getID(id)}
                                     className="card"
                                     key={id}
                                 >

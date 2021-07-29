@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import checked from '../../assets/icons/circle-checked.svg'
 import right from '../../assets/icons/arrowRight.svg'
 import dots from '../../assets/images/dots.png'
 import nextBg from '../../assets/icons/nextBg.svg'
 import { ServiceData } from '../../mock/data'
 import './style.scss'
+import { ServiceCardIDContext } from '../../context/context'
 import { Link } from 'react-router-dom'
 
 const Services = () => {
+
+    const [idContext, setIdContext] = useContext(ServiceCardIDContext);
+
+    const getID = (id) => {
+        setIdContext(id)
+    }
+
     return (
         <div className='services'>
             <div className="container">
@@ -16,7 +24,11 @@ const Services = () => {
                     {
                         ServiceData.map(({ id, summa, title, descr1, descr2 }) => {
                             return (
-                                <Link to={'/prmedia' + id} className="card" key={id}>
+                                <Link 
+                                to='/prmedia' 
+                                onClick={()=>getID(id)}
+                                className="card" 
+                                key={id}>
                                     <h4>{title}</h4>
                                     <p>
                                         <img src={checked} alt="" />

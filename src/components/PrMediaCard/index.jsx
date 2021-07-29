@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './styleMedia.scss'
 import { ServiceCardAbout } from '../../mock/data'
+import {ServiceCardIDContext} from '../../context/context'
 
-const PrMediaCard = ({idNum}) => {
+
+const PrMediaCard = () => {
+
+    const [idContext, setIdContext] = useContext(ServiceCardIDContext); 
 
     return (
         <div className='prMediaCrad'>
@@ -10,7 +14,7 @@ const PrMediaCard = ({idNum}) => {
                 {
                     ServiceCardAbout.map(({ id, descr, text, img }) => {
                         return (
-                            id === idNum  && <div className="card-media" key={id}>
+                            id === idContext  && <div className="card-media" key={id}>
                                 <h1>{descr}</h1>
 
                                 <div className="wrapper">

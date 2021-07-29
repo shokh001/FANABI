@@ -20,11 +20,7 @@ const Root = () => {
             <Route key={id} path={path} component={component} />
           ))}
           <Route path='/capital' component={RpiCapital}/>
-          <Route path='/prmedia1' component={PrMedia}/>
-          <Route path='/prmedia2' component={PrMedia2}/>
-          <Route path='/prmedia3' component={PrMedia3}/>
-          <Route path='/prmedia4' component={PrMedia4}/>
-
+          <Route path='/prmedia' component={PrMedia}/>
           <Route path="/">
             <Redirect to="/домa" />
           </Route>

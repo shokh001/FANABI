@@ -5,7 +5,7 @@ import PrMediaCard from '../components/PrMediaCard'
 const PrMedia = () => {
     return (
         <div className='bgGrey'>        
-            <PrMediaCard idNum={1}/>
+            <PrMediaCard />
             <Footer />
         </div>
     )

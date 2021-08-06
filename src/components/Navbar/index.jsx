@@ -9,7 +9,7 @@ import twitter from '../../assets/icons/twitter.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import call from '../../assets/icons/call.svg'
 import burger from '../../assets/icons/burger.svg'
-import times from '../../assets/icons/times.png'
+import times from '../../assets/icons/times.svg'
 import arrowBottom from '../../assets/icons/bottom-arrow.svg'
 
 const Navbar = () => {
@@ -42,6 +42,18 @@ const Navbar = () => {
 
     const handleClick = (id) => {
         setActiveLink(id)
+    }
+
+    const disableScrolling = () => {
+        setMobileNav(true)
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function () { window.scrollTo(x, y); };
+    }
+
+    const enableScrolling = () => {
+        setMobileNav(false)
+        window.onscroll = function () { };
     }
 
 
@@ -99,7 +111,7 @@ const Navbar = () => {
                         src={burger}
                         alt=""
                         className='burger-icon'
-                        onClick={() => setMobileNav(true)}
+                        onClick={disableScrolling}
                     />
                 </div>
             </div>
@@ -107,7 +119,8 @@ const Navbar = () => {
             <div className="mobile-navbar" style={{ transform: mobileNav && 'translateX(0)' }}>
                 <div className="close-menu">
                     <Link onClick={() => setMobileNav(false)} to='/домa' className='home'>Домa</Link>
-                    <img src={times} alt="" onClick={() => setMobileNav(false)} />
+                    <img src={times} alt="" onClick={enableScrolling} />
+                    {/* <div className="times" onClick={enableScrolling}>x</div> */}
                 </div>
                 <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Наши'>Наши работы</Link>
                 <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Услуги'>Услуги и цены</Link>

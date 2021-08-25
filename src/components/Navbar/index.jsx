@@ -40,11 +40,6 @@ const Navbar = () => {
         setDisplay(false)
     }
 
-    const handleClick = (id) => {
-        setActiveLink(id)
-        enableScrolling()
-    }
-
     const disableScrolling = () => {
         setMobileNav(true)
         var x = window.scrollX;
@@ -57,6 +52,14 @@ const Navbar = () => {
         window.onscroll = function () { };
     }
 
+    const handleClick = (id) => {
+        setActiveLink(id)
+    }
+
+    const mobileNavClick = () => {
+        setMobileNav(false);
+        enableScrolling()
+    }
 
     return (
         <div className="navbar">
@@ -121,12 +124,11 @@ const Navbar = () => {
                 <div className="close-menu">
                     <Link onClick={() => setMobileNav(false)} to='/домa' className='home'>Домa</Link>
                     <img src={times} alt="" onClick={enableScrolling} />
-                    {/* <div className="times" onClick={enableScrolling}>x</div> */}
                 </div>
-                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Наши'>Наши работы</Link>
-                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Услуги'>Услуги и цены</Link>
-                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/студии'>О студии</Link>
-                <Link onClick={() => setMobileNav(false)} className='mobile-link' to='/Контакты'>Контакты</Link>
+                <Link onClick={mobileNavClick} className='mobile-link' to='/Наши'>Наши работы</Link>
+                <Link onClick={mobileNavClick} className='mobile-link' to='/Услуги'>Услуги и цены</Link>
+                <Link onClick={mobileNavClick} className='mobile-link' to='/студии'>О студии</Link>
+                <Link onClick={mobileNavClick} className='mobile-link' to='/Контакты'>Контакты</Link>
             </div>
         </div>
     )

@@ -30,7 +30,7 @@ const MainContent = () => {
                     </div>
                     <h2>наша команда</h2>
                 </a>
-                <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="j942wKiXFu8" onClose={() => setOpen(false)} />
+                <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="iykUKW3Lijg" onClose={() => setOpen(false)} />
             </div>
         </div>
     )

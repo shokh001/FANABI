@@ -56,7 +56,7 @@ const TheStudio = () => {
                             </div>
                             <h3>наша команда</h3>
                         </div>
-                        <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="j942wKiXFu8" onClose={() => setOpen(false)} />
+                        <ModalVideo className='modal' channel='youtube' autoplay isOpen={isOpen} videoId="iykUKW3Lijg" onClose={() => setOpen(false)} />
                     </div>
                 </div>
 
